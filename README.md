@@ -91,13 +91,121 @@ You are free to:
 - Modify and distribute the work
 - Use commercially or non-commercially
 
+## TOML Conversion Standards
+
+### Reference Standard: 001.toml
+
+The file `src/001.toml` serves as the **reference standard** for all other questions. All TOML files should follow this exact format:
+
+```toml
+id = "1"
+question = "What is your only comfort in Life and Death?"
+
+[[sections]]
+text = "That both in Soul and"
+verses = "1 Corinthians 6:19; 1 Thessalonians 5:10"
+
+[[sections]]
+text = "Body, whether I live or die"
+verses = "Romans 14:8"
+
+[[sections]]
+text = ", I am not mine own, but"
+verses = "1 Corinthians 3:23"
+```
+
+### Conversion Guidelines for All Questions
+
+When converting questions to match the 001.toml standard:
+
+#### 1. **Language Modernization**
+- thy → your
+- thee → you
+- thou → you
+- hath → has
+- doth → does
+- maketh → makes
+- preserveth → preserves
+- assureth → assures
+- dye → die
+
+#### 2. **Scripture Reference Format**
+- Use full book names: "1 Corinthians" not "1 Cor."
+- Separate multiple references with "; "
+- Use hyphens for verse ranges: "1:18-19" not "1. 18, 19"
+- Remove OCR artifacts like "(a)", "(b)", "(c)" markers
+
+#### 3. **Section Structure**
+- Break answers into logical `[[sections]]` blocks
+- Each section should end at a natural pause or biblical reference point
+- Each section gets its own `verses` field with relevant Scripture references
+- Remove OCR artifacts and formatting errors
+
+#### 4. **Clean Text Requirements**
+- Remove OCR artifacts like "þ", "3", "T-", "nd -", etc.
+- Fix spacing and punctuation
+- Ensure proper capitalization
+- Remove page break artifacts and formatting remnants
+
+### Current Status (149 questions total)
+
+#### Existing Files (10 files)
+- ✅ **001.toml** - Fully converted and standardized (REFERENCE STANDARD)
+- ❌ **002.toml** - Needs conversion (contains OCR artifacts)
+- ❌ **003.toml** - Needs conversion
+- ❌ **004.toml** - Needs conversion
+- ❌ **005.toml** - Needs conversion
+- ❌ **006.toml** - Needs conversion
+- ❌ **007.toml** - Needs conversion
+- ❌ **008.toml** - Needs conversion
+- ❌ **009.toml** - Needs conversion
+- ❌ **010.toml** - Needs conversion
+
+#### Missing Files (139 files)
+- ❌ **011.toml through 149.toml** - Need to be created from OCR text
+
+**Progress: 1/149 files completed (0.7%)**
+
+### Project Scope
+This is a substantial conversion project requiring:
+1. **Conversion of existing files** (002-010.toml): 9 files need OCR cleanup and modernization
+2. **Creation of new files** (011-149.toml): 139 files need to be extracted from the OCR text and formatted
+3. **Quality assurance**: All files must match the 001.toml reference standard
+
+### Conversion Workflow
+For this large-scale project, contributors should:
+
+1. **Start with existing files** (002-010.toml) to practice the conversion process
+2. **Use the OCR text** (`original/orthodox-catechism-ocr.txt`) as source material for missing questions
+3. **Follow the 001.toml template** exactly for structure and formatting
+4. **Extract questions systematically** from the OCR text, looking for "Q." or "Quest." patterns
+5. **Apply language modernization** consistently across all files
+6. **Verify biblical references** and format them according to the standard
+
+### Automation Opportunities
+Given the scale (149 files), consider developing:
+- Scripts to extract Q&A pairs from the OCR text
+- Automated language modernization tools
+- Batch processing for biblical reference formatting
+- Quality assurance checks against the 001.toml standard
+
+### Conversion Priority
+All remaining TOML files should be converted to match the 001.toml standard to ensure:
+- Consistent formatting across all questions
+- Proper footnote generation in PDF output
+- Modern, readable language
+- Clean biblical references
+
 ## Contributing
 
 Contributions are welcome! Here's how you can help:
+- **Convert TOML files** to match the 001.toml standard
 - Review existing questions and answers
 - Propose improvements
 - Discuss theological interpretations
 - Help with formatting and documentation
+
+**Priority Contribution**: Help convert the remaining TOML files (002.toml onwards) to match the 001.toml reference standard.
 
 Please open an issue or submit a pull request with your suggestions.
 
