@@ -27,6 +27,51 @@ This project was initiated to:
 - Publicly accessible PDF generation
 - Open collaboration model
 - Creative Commons licensed
+- Modernized language (thy→your, thee→you, etc.)
+- Proper footnote structure with biblical references
+
+## TOML Structure and Footnote System
+
+### How TOML Corresponds to Footnotes
+
+The TOML format uses multiple `[[sections]]` blocks to create numbered footnotes in the final PDF output. Each section corresponds to a superscript number in the text:
+
+**TOML Structure:**
+```toml
+[[sections]]
+text = "That both in Soul and"
+verses = "1 Corinthians 6:19; 1 Thessalonians 5:10"
+
+[[sections]]
+text = "Body, whether I live or die"
+verses = "Romans 14:8"
+```
+
+**PDF Output:**
+- Text appears with superscript numbers (¹, ², ³, etc.)
+- Footnotes appear at bottom with corresponding biblical references
+- Each section's `verses` field becomes the footnote content
+
+### Language Modernization
+
+This project modernizes archaic language while preserving theological accuracy:
+
+- **thy** → **your**
+- **thee** → **you** 
+- **thou** → **you**
+- **hath** → **has**
+- **doth** → **does**
+- **maketh** → **makes**
+- **preserveth** → **preserves**
+- **assureth** → **assures**
+
+### Original vs. Modernized Example
+
+**Original (1650s):**
+> "What is thy only comfort in Life and Death? That both in Soul and Body, whether I live or dye, I am not mine own, but belong wholly unto my most faithful Lord and Saviour Jesus Christ: who by his most precious Blood fully satisfying for all my Sins, hath delivered me from all the power of the Devil, and so preserveth me..."
+
+**Modernized:**
+> "What is your only comfort in Life and Death? That both in Soul and Body, whether I live or die, I am not mine own, but belong wholly unto my most faithful Lord and Saviour Jesus Christ: who by his most precious Blood fully satisfying for all my Sins, has delivered me from all the power of the Devil, and so preserves me..."
 
 ## Releases
 
