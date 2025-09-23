@@ -175,3 +175,4 @@ cython_debug/
 
 # Project-specific ignores
 pages/
+catechism-page-analysis-prompt.md
