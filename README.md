@@ -1,5 +1,7 @@
 # Orthodox Catechism
 
+> **Beta (v0.9.0)** — This edition is under active review. Text, numbering, and prooftexts may change before the 1.0 release. Feedback and corrections are welcome via [GitHub Issues](https://github.com/BaptistSymbolics/OrthodoxCatechism/issues).
+
 ## Downloads
 
 [Versioned releases can be found here.](https://github.com/BaptistSymbolics/OrthodoxCatechism/releases)
