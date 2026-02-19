@@ -16,22 +16,55 @@ from shared.models import Question, Section, Footnote
 from shared.utils import create_bible_url, sort_questions
 
 
+def load_schedule(source_dir: str) -> Optional[Dict]:
+    """Load the weekly reading schedule if it exists."""
+    schedule_path = Path(source_dir) / 'schedule.toml'
+    if not schedule_path.exists():
+        return None
+    try:
+        with open(schedule_path, 'r', encoding='utf-8') as f:
+            return toml.load(f)
+    except Exception as e:
+        print(f"Warning: Could not load schedule: {e}")
+        return None
+
+
+def build_week_map(schedule: Dict) -> Dict[int, Dict]:
+    """Build a mapping from question number to its week info.
+
+    Returns a dict where keys are question IDs (int) that start a new week,
+    and values are dicts with 'week' and 'title'.
+    """
+    week_map = {}
+    for week_data in schedule.get('weeks', []):
+        questions = week_data.get('questions', [])
+        if questions:
+            first_q = questions[0]
+            week_map[first_q] = {
+                'week': week_data['week'],
+                'title': week_data.get('title', ''),
+            }
+    return week_map
+
+
 def load_toml_file(file_path: str) -> List[Question]:
     """Load and parse a TOML file into Question objects."""
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             data = toml.load(file)
-            
+
         questions = []
         # Handle single question file
         if isinstance(data, dict) and 'id' in data and 'question' in data:
-            questions.append(parse_question_data(data))
+            if not data.get('optional', False):
+                questions.append(parse_question_data(data))
         # Handle multiple question file
         elif isinstance(data, list):
             for item in data:
                 if isinstance(item, dict) and 'id' in item and 'question' in item:
-                    questions.append(parse_question_data(item))
-        
+                    if not item.get('optional', False):
+                        questions.append(parse_question_data(item))
+
         return questions
     except Exception as e:
         print(f"Error processing file {file_path}: {e}")
@@ -46,7 +79,7 @@ def parse_question_data(data: Dict) -> Question:
             text=section_data.get('text', '').strip(),
             verses=section_data.get('verses', '').strip()
         ))
-    
+
     return Question(
         id=data.get('id', ''),
         question=data.get('question', ''),
@@ -138,22 +171,34 @@ def generate_latex_document_end() -> str:
     return "\\end{document}\n"
 
 
-def generate_latex(questions: Dict[str, Question], template_path: Optional[str] = None) -> str:
+def generate_latex(questions: Dict[str, Question], template_path: Optional[str] = None,
+                    week_map: Optional[Dict[int, Dict]] = None) -> str:
     """Generate complete LaTeX content from questions."""
     # Generate the document structure
     latex = generate_latex_preamble()
     latex += generate_latex_document_start()
-    
+
     # Process each question
     for q_id, question in sorted(questions.items(), key=lambda x: float(x[0]) if x[0].replace('.', '', 1).isdigit() else x[0]):
+        # Insert week heading if this question starts a new week
+        if week_map:
+            q_num = int(q_id) if q_id.isdigit() else None
+            if q_num and q_num in week_map:
+                week_info = week_map[q_num]
+                week_num = week_info['week']
+                week_title = week_info['title']
+                latex += f"\\newpage\n"
+                latex += f"\\subsection{{Week {week_num}: {week_title}}}\n"
+                latex += f"\\vspace{{10pt}}\n\n"
+
         q_latex = process_question(question)
         a_latex, footnotes = process_answer(question)
         f_latex = process_footnotes(footnotes)
-        
+
         # Combine into a complete question section with controlled spacing
         section_latex = f"{q_latex}\n\n{a_latex}\n\n{f_latex}\n\n\\vspace{{10pt}}\\hrulefill\n\n"
         latex += section_latex
-    
+
     latex += generate_latex_document_end()
     return latex
 
@@ -182,9 +227,13 @@ def main() -> None:
     
     # Process files
     questions = process_files(toml_files)
-    
+
+    # Load schedule for weekly reading headings
+    schedule = load_schedule(args.source)
+    week_map = build_week_map(schedule) if schedule else None
+
     # Generate LaTeX
-    latex_content = generate_latex(questions, args.template)
+    latex_content = generate_latex(questions, args.template, week_map)
     
     # Save the result
     save_latex(latex_content, args.output)
