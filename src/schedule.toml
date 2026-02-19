@@ -1,0 +1,279 @@
+# Weekly Reading Schedule for the Orthodox Catechism
+#
+# Based on the Heidelberg Catechism's 52 Lord's Day divisions,
+# adapted for Collins' Baptist insertions and renumbering.
+#
+# Optional questions (laying on of hands Q84-89, hymn-singing Q98)
+# are not included in the default schedule but are noted where they
+# fall for those who wish to include them.
+#
+# Each week lists the question range for the standard 149-question
+# published edition.
+
+# Part I: Of Man's Misery (Weeks 1-4)
+
+[[weeks]]
+week = 1
+title = "Our Only Comfort"
+questions = [1, 2]
+
+[[weeks]]
+week = 2
+title = "The Knowledge of Misery"
+questions = [3, 4, 5]
+
+[[weeks]]
+week = 3
+title = "The Origin of Sin"
+questions = [6, 7, 8]
+
+[[weeks]]
+week = 4
+title = "God's Justice and Wrath"
+questions = [9, 10, 11]
+
+# Part II: Of Man's Deliverance (Weeks 5-31)
+
+[[weeks]]
+week = 5
+title = "The Need for a Mediator"
+questions = [12, 13, 14]
+
+[[weeks]]
+week = 6
+title = "The Nature of the Mediator"
+questions = [15, 16, 17]
+
+[[weeks]]
+week = 7
+title = "The Gospel and Election"
+questions = [18, 19]
+
+[[weeks]]
+week = 8
+title = "True Faith and the Creed"
+questions = [20, 21, 22, 23]
+
+[[weeks]]
+week = 9
+title = "God the Father and Creation"
+questions = [24, 25, 26]
+
+[[weeks]]
+week = 10
+title = "Christ the Saviour"
+questions = [27, 28, 29, 30]
+
+[[weeks]]
+week = 11
+title = "The Only Begotten Son"
+questions = [31, 32]
+
+[[weeks]]
+week = 12
+title = "The Incarnation"
+questions = [33, 34]
+
+[[weeks]]
+week = 13
+title = "The Suffering of Christ"
+questions = [35, 36, 37]
+
+[[weeks]]
+week = 14
+title = "The Death and Burial of Christ"
+questions = [38, 39, 40, 41, 42]
+
+[[weeks]]
+week = 15
+title = "The Resurrection and Ascension"
+questions = [43, 44]
+
+[[weeks]]
+week = 16
+title = "Christ in Heaven"
+questions = [45, 46, 47]
+
+[[weeks]]
+week = 17
+title = "Christ at the Right Hand of God"
+questions = [48, 49, 50]
+
+[[weeks]]
+week = 18
+title = "The Holy Spirit and the Church"
+questions = [51, 52, 53]
+
+[[weeks]]
+week = 19
+title = "Forgiveness, Resurrection, and Everlasting Life"
+questions = [54, 55, 56]
+
+[[weeks]]
+week = 20
+title = "Justification by Faith"
+questions = [57, 58, 59]
+
+[[weeks]]
+week = 21
+title = "Good Works and Grace"
+questions = [60, 61]
+
+[[weeks]]
+week = 22
+title = "Gratitude and Conversion"
+questions = [62, 63]
+
+[[weeks]]
+week = 23
+title = "The Sacraments"
+questions = [64, 65, 66]
+
+[[weeks]]
+week = 24
+title = "Baptism: Its Nature and Subjects"
+questions = [67, 68, 69, 70]
+
+[[weeks]]
+week = 25
+title = "Baptism: The Covenant Argument"
+questions = [71, 72, 73, 74, 75]
+
+[[weeks]]
+week = 26
+title = "Baptism: Abraham's Covenant and Circumcision"
+questions = [76, 77, 78, 79]
+
+[[weeks]]
+week = 27
+title = "Baptism: Its Spiritual Meaning"
+questions = [80, 81, 82, 83]
+# Optional: Laying on of Hands (Q84-89) may be read this week
+
+[[weeks]]
+week = 28
+title = "The Lord's Supper: Institution and Meaning"
+questions = [90, 91, 92]
+
+[[weeks]]
+week = 29
+title = "The Lord's Supper: Against the Mass"
+questions = [93, 94, 95]
+
+[[weeks]]
+week = 30
+title = "The Lord's Supper: Worthy Participation"
+questions = [96, 97]
+# Optional: Hymn-singing (Q98) may be read this week
+
+[[weeks]]
+week = 31
+title = "Church Discipline and the Keys"
+questions = [99, 100, 101]
+
+# Part III: Of Thankfulness (Weeks 32-52)
+
+[[weeks]]
+week = 32
+title = "Gratitude and Conversion"
+questions = [102, 103, 104]
+
+[[weeks]]
+week = 33
+title = "The Old and New Man"
+questions = [105, 106, 107]
+
+[[weeks]]
+week = 34
+title = "The Law of God"
+questions = [108, 109]
+
+[[weeks]]
+week = 35
+title = "The Preface to the Commandments"
+questions = [110, 111, 112]
+
+[[weeks]]
+week = 36
+title = "The First Commandment"
+questions = [113, 114, 115]
+
+[[weeks]]
+week = 37
+title = "The Second Commandment"
+questions = [116, 117]
+
+[[weeks]]
+week = 38
+title = "Images and Worship"
+questions = [118, 119]
+
+[[weeks]]
+week = 39
+title = "The Third Commandment"
+questions = [120, 121, 122]
+
+[[weeks]]
+week = 40
+title = "Oaths and Swearing"
+questions = [123, 124]
+
+[[weeks]]
+week = 41
+title = "The Fourth Commandment"
+questions = [125, 126]
+
+[[weeks]]
+week = 42
+title = "The Fifth Commandment"
+questions = [127, 128]
+
+[[weeks]]
+week = 43
+title = "The Sixth Commandment"
+questions = [129, 130, 131, 132]
+
+[[weeks]]
+week = 44
+title = "The Seventh Commandment"
+questions = [133, 134, 135]
+
+[[weeks]]
+week = 45
+title = "The Eighth Commandment"
+questions = [136, 137, 138]
+
+[[weeks]]
+week = 46
+title = "The Ninth Commandment"
+questions = [139, 140]
+
+[[weeks]]
+week = 47
+title = "The Tenth Commandment and the Law's Purpose"
+questions = [141, 142, 143, 144]
+
+[[weeks]]
+week = 48
+title = "Prayer: Its Necessity and the Lord's Prayer"
+questions = [145, 146, 147, 148, 149]
+
+[[weeks]]
+week = 49
+title = "Our Father in Heaven"
+questions = [150, 151, 152]
+
+[[weeks]]
+week = 50
+title = "Your Kingdom Come, Your Will Be Done"
+questions = [153, 154]
+
+[[weeks]]
+week = 51
+title = "Daily Bread and Forgiveness"
+questions = [155, 156]
+
+[[weeks]]
+week = 52
+title = "Temptation, Deliverance, and Amen"
+questions = [157, 158, 159]
