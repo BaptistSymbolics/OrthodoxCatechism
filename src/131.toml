@@ -1,6 +1,22 @@
 id = "131"
-question = "What is the ninth Commandment?"
+question = "But this Commandment seems to forbid Murder only?"
 
 [[sections]]
-text = "You shall not bear false Witness against your Neighbour."
+text = "But in forbidding Murder, God does further teach, that he hates the Root, namely,"
 verses = ""
+
+[[sections]]
+text = "Anger;"
+verses = "James 1:20; Galatians 5:20,21"
+
+[[sections]]
+text = "Envy;"
+verses = "Romans 1:29"
+
+[[sections]]
+text = "Hatred, and Desire of Revenge; and"
+verses = "1 John 2:9,11"
+
+[[sections]]
+text = "does account them all for Murder."
+verses = "1 John 3:15"

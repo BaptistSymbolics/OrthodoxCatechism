@@ -1,10 +1,12 @@
 id = "89"
-question = "Are they also to be admitted to the Lords Supper who in Confession and Life declare themselves to be Infidels, profane, and ungodly?"
+optional = true
+section = "laying-on-of-hands"
+question = "Does the ceasing of these extraordinary signs mean that laying on of Hands also ceases?"
 
 [[sections]]
-text = "No; For by that means the Ordinance of God is profaned, and the Wrath of God is"
+text = "No; for as Prayer, Baptism, Preaching, does not cease, though it be not so miraculously owned as in the Primitive times; neither does laying on of Hands cease, from the same Parity of Reason, though it be not so crowned now, as in the Apostles' Days."
 verses = ""
 
 [[sections]]
-text = "stirred up against the whole Assembly, wherefore the Church by the Commandment of Christ and his Apostles, inspired by the Holy Ghost, using the Keys of the Kingdom of Heaven, ought to drive them from this Supper till they shall repent and change their Manners."
-verses = "1 Corinthians 11:20,34; Isaiah 1:11; Isaiah 66:3; Jeremiah 7:21; Psalm 50:16"
+text = "Moreover our Brethren generally do hold, that five of those Principles in Hebrews 6 are the Duty of every individual Member to believe and practice, namely, every Member (say they) ought to repent, believe, be baptized, believe the Resurrection of the dead, and eternal Judgment; and why this of laying on of Hands should be excluded from being the Practice of every Christian, being a practical Ordinance, the bare belief of it not being enough, it being among the universal Principles of Christ's Doctrine, I never yet did, nor cannot see any good Reason."
+verses = ""

@@ -1,14 +1,10 @@
 id = "12"
-question = "How many things are necessary for thee to know, that thou enjoying this comfort may live and die happily?"
+question = "Are we able to satisfy by ourselves?"
 
 [[sections]]
-text = "Three. The first, what is the greatness of my sin and misery. The second, how I am"
+text = "Not at all. On the contrary, we do every day"
+verses = "Job 9:2,3; Job 15:15; Matthew 6:12"
+
+[[sections]]
+text = "increase our debt."
 verses = ""
-
-[[sections]]
-text = "delivered from all Sin and Misery. The third, what thanks"
-verses = "Luke 24:47; 1 Corinthians 6:11; Romans 8:15; Titus 3:3,4,5,6,7,8; John 4:41; Romans 3"
-
-[[sections]]
-text = "I owe unto God for this delivery."
-verses = "Ephesians 5:10; 1 Peter 2:9; 1 Peter 3:10,11,12; Romans 6:11,12,13; Matthew 5:16; Titus 2:11,12"

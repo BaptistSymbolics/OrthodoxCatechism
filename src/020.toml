@@ -1,10 +1,26 @@
 id = "20"
-question = "Is then Salvation restored by Christ to all men who perished in Adam?"
+question = "What is Faith?"
 
 [[sections]]
-text = "Not to all: but to those only who by a true Faith are ingrafted into him"
-verses = "John 1:12; John 3:36; Isaiah 53:11; Psalm 2:12; Romans 11:20; Hebrews 4:2; Hebrews 10:39"
+text = "It is not only a knowledge, by which I surely assent to all things which God"
+verses = "Hebrews 11:13; James 2:19; Galatians 2:20"
 
 [[sections]]
-text = "and receive his benefits."
+text = "has revealed unto us in his Word, but also an"
+verses = "Romans 4:16; Romans 5:1; Romans 10:10"
+
+[[sections]]
+text = "assured trust kindled in"
+verses = "Romans 1:16; Romans 10:17; 1 Corinthians 1:21; Mark 16:16; Acts 16:14"
+
+[[sections]]
+text = "my heart by the Holy Ghost, through the Gospel, by which I rest my trust in God, being assuredly resolved that: Remission of Sins, everlasting"
+verses = "Matthew 16:17; John 3:5; Galatians 5:22; Philippians 1:19"
+
+[[sections]]
+text = "Righteousness, and life is given not to others only, but to me also, and that freely through the Mercy of God, for"
+verses = "Romans 3:24,25; Acts 10:45"
+
+[[sections]]
+text = "the Merits of Christ alone."
 verses = ""
